@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equaçõa do 2º grau</title>
+</head>
+<body>
+    <header>
+        <h1>Calculadora de equação do 2º grau</h1>
+    </header>
+    <div>
+        <p>Digite o numero que possui a função de 'a' na equação<input type="number" id="a"></p>
+        <P>Digite o numero que possui a função de 'b' na equação<input type="number" id='b'></P>
+        <p>Digite o numero que possui a funçãon de 'c' na equação<input type="number" id='c'></p>
+        <input type="button" value="Calcular" onclick="calcular()">
+    </div>
+    <div id="res">
+        calculando...
+    </div>
+    <footer>
+        <p>&copf; Victor`s Sites</p>
+    </footer>
+    <script>
+        function calcular(){
+                var a = document.getElementById('a')
+                var b = document.getElementById('b')
+                var c = document.getElementById('c')
+                var res = document.getElementById('res')
+                var a = Number(a.value)
+                var b = Number(b.value)
+                var c = Number(c.value)
+                var resultado1 = Math.sqrt((b*b)-(4*a*c))
+                var resultado2 = -b + resultado1
+                var denominador = 2*a
+                var resultado3 = resultado2 / denominador
+                var resultado4 = Math.sqrt((b*b)-(4*a*c))
+                var resultado5 = -b - resultado4
+                var resultado6 = resultado5 / denominador
+                res.innerHTML = ''
+                res.innerHTML += 'x positivo = ' + resultado3 + ' e ' + 'x negativo = ' + resultado6;
+        }
+        
+    </script>
+</body>
+</html>
